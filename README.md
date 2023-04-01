@@ -1,1 +1,1 @@
-# Hospitl Management
+# Hospitel Management
