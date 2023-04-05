@@ -1,0 +1,98 @@
+.maincontainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  mat-card{
+    width: 450px;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 6px #00000029;
+  }
+  
+  .content{
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+  
+  .header{
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .sub-header{
+    margin-top: 5px;
+    font-size: 13px;
+    color: #98A8C5;
+  }
+  
+  input{
+    margin-top: 20px;
+    height: 38px;
+    width: 392px;
+    outline: none;
+    border: none;
+    background: #EBEBEB;
+    border-radius: 20px;
+    padding-left: 20px;
+  }
+  
+  input::placeholder{
+    color: #CCC7C8;
+    font-weight: bold;
+  }
+  
+  .toggle-switch{
+    margin-top: 20px;
+    font-size: 13px;
+  }
+  
+  .registerbtn{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  
+  button{
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: red;
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .a{
+    width: 170px;
+    background: #336CFB;
+  }
+  
+  img{
+    width: 25px;
+  }
+  
+  .forgotpass{
+    margin-top: 40px;
+  }
+  
+  a{
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #5F7EFB;
+  }
+  
+  .signin{
+    margin-top: 40px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
