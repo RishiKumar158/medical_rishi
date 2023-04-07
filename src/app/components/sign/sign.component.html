@@ -7,10 +7,26 @@
           <div class="sub-header">
               Create your Account
           </div>
-          <form>
-              <input type="text" placeholder="Name">
-              <input type="text" placeholder="Email address">
-              <input type="text" placeholder="Password">
+          <form [formGroup]="registerForm" (ngSubmit)="register()">
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput type="text" placeholder="Name"  formControlName="firstName">
+                <mat-error>First name is required</mat-error>
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Email address</mat-label>
+                <input  matInput type="text" placeholder="Email address" formControlName="email">
+                <mat-error>email is required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input  matInput type="password" placeholder="Password" formControlName="password">
+                <mat-error>password is required</mat-error>
+            </mat-form-field>
+             
+              
+              
               <mat-slide-toggle color="primary" class="toggle-switch">I agree to the Terms and Privacy</mat-slide-toggle>
               <div class="registerbtn">
                   <button>

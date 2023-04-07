@@ -10,8 +10,8 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'sign-up',component:SignComponent},
   {path:'dashboard',component:DashboardComponent},
-  {path:'appoint',component:AppointmentsListComponent},
-  {path:'addAppoint',component:AddAppointComponent}
+  {path:'appointment',component:AppointmentsListComponent},
+  {path:'addAppointment',component:AddAppointComponent}
 
 
 ];

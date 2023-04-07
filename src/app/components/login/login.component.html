@@ -7,9 +7,19 @@
           <div class="sub-header">
               Login to access your Account
           </div>
-          <form>
-              <input type="text" placeholder="Login">
-              <input type="text" placeholder="Password">
+          <form [formGroup]="registerForm" (ngSubmit)="login()">
+            <mat-form-field appearance="outline">
+                <mat-label>Email address</mat-label>
+                <input  matInput type="text" placeholder="Email address" formControlName="email">
+                <mat-error>email is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input  matInput type="password" placeholder="Password" formControlName="password">
+                <mat-error>password is required</mat-error>
+            </mat-form-field>
+
               <mat-slide-toggle color="primary" class="toggle-switch">Remember me</mat-slide-toggle>
               <div class="loginbtn">
                   <button>

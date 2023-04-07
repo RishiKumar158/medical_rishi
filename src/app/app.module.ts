@@ -21,6 +21,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AppointmentsListComponent } from './components/appointments-list/appointments-list.component';
 import { AddAppointComponent } from './components/add-appoint/add-appoint.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,7 @@ import { AddAppointComponent } from './components/add-appoint/add-appoint.compon
     MatFormFieldModule,
     MatInputModule,MatToolbarModule,MatListModule,MatIconModule,MatMenuModule,FormsModule,
     MatDialogModule,ReactiveFormsModule,BrowserAnimationsModule,MatCardModule,MatCheckboxModule,
-    MatSlideToggleModule,MatButtonModule,MatSidenavModule
+    MatSlideToggleModule,MatButtonModule,MatSidenavModule,HttpClientModule,MatSnackBarModule
   
   ],
   providers: [],
