@@ -8,7 +8,7 @@
               Create your Account
           </div>
           <form [formGroup]="registerForm" (ngSubmit)="register()">
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" class="longfield">
                 <mat-label>Name</mat-label>
                 <input matInput type="text" placeholder="Name"  formControlName="firstName">
                 <mat-error>First name is required</mat-error>

@@ -8,9 +8,9 @@
               Login to access your Account
           </div>
           <form [formGroup]="registerForm" (ngSubmit)="login()">
-            <mat-form-field appearance="outline">
+            <mat-form-field  appearance="outline" class="form-field">
                 <mat-label>Email address</mat-label>
-                <input  matInput type="text" placeholder="Email address" formControlName="email">
+                <input  matInput type="text" placeholder="Email address"  formControlName="email">
                 <mat-error>email is required</mat-error>
             </mat-form-field>
 

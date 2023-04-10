@@ -34,14 +34,18 @@ mat-card{
 }
 
 input{
-  margin-top: 20px;
+ // margin-top: 20px;
   height: 38px;
   width: 445px;
   outline: none;
   border: none;
-  background: #EBEBEB;
+  //background-color: #EBEBEB;
   border-radius: 20px;
   padding-left: 20px;
+}
+
+.form-field{
+  //background-color: #EBEBEB;
 }
 
 input::placeholder{
@@ -96,6 +100,8 @@ a{
 mat-form-field {
   width: 500px !important;
   height: -1px !important;
+  //background-color: #EBEBEB !important;
+
 }
 
 mat-form-field.mat-form-field.mat-form-field-appearance-outline > div.mat-form-field-wrapper > div.mat-form-field-flex > div.mat-form-field-infix  { padding: 0.4em 0px }

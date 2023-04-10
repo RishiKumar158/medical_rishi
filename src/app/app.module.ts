@@ -23,6 +23,7 @@ import { AppointmentsListComponent } from './components/appointments-list/appoin
 import { AddAppointComponent } from './components/add-appoint/add-appoint.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 @NgModule({
   declarations: [
     AppComponent,

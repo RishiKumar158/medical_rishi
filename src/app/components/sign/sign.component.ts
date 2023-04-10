@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import { UserService } from 'src/app/Services/user/user.service';
+import { Router } from '@angular/router';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-sign',
   templateUrl: './sign.component.html',
@@ -11,7 +13,8 @@ export class SignComponent implements OnInit {
   registerForm!: FormGroup;
   submitted = false;
   hide : boolean = true;
-  constructor(private formBuilder: FormBuilder,private _snackBar:MatSnackBar) { }
+  data:any
+  constructor(private formBuilder: FormBuilder,private user:UserService,private _snackBar:MatSnackBar,private router: Router) { }
 
     ngOnInit() {
         this.registerForm = this.formBuilder.group({
@@ -31,17 +34,19 @@ export class SignComponent implements OnInit {
       register()
       {
         if(this.registerForm.valid){
-          let data = {
+          this.data = {
             firstName : this.registerForm.value.firstName,
            
             email: this.registerForm.value.email,
             password: this.registerForm.value.password,
-            service:'advance'
+            //service:'advance'
           }
           
-          // this.userService.registration(data).subscribe((response:any)=>{
-          //     console.log("Register cli successful", response); 
-          //     this._snackBar.open("Registration Successfull",'',{duration:5000,horizontalPosition: 'start'});},
+            this.user.registration(this.data).subscribe((response:any)=>{
+              console.log("Register cli successful", response); 
+
+              this.router.navigate(["login"])
+              })
               
        //);
         console.log("reg called:",this.registerForm.value);
@@ -52,9 +57,9 @@ export class SignComponent implements OnInit {
            this._snackBar.open("fill all the fields properly",'',{duration:5000, horizontalPosition: 'start'});
           
         }
+
+      
       }
 
-      ShowPassword(){
-        this.hide = !this.hide;            
-    }
+   
 }
