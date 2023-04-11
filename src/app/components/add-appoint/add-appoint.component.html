@@ -8,13 +8,57 @@
 
             </div>
             <form>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Doctor">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Date">
-                <input type="text" placeholder="Password">
-                <input type="text" placeholder="Number">
-                <input type="text" placeholder="Injury">
+
+                
+
+                <mat-form-field appearance="outline" class="form-field">
+
+                    <input matInput type="text" placeholder="Name" formControlName="Name">
+                    <mat-error>Name is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="form-field">
+
+                    <input matInput type="text" placeholder="Doctor" formControlName="doctor">
+                    <mat-error>Doctor is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="form-field">
+
+                    <input matInput type="text" placeholder="Email address" formControlName="email">
+                    <mat-error>email is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="form-field">
+
+                    <input matInput type="date" placeholder="Date" formControlName="Date">
+                    <mat-error>Date is required</mat-error>
+                </mat-form-field>
+                <div class="smallfIELD">
+                    <mat-form-field appearance="outline">
+
+                        <input matInput type="text" placeholder="From" formControlName="startTime" class="wid">
+                        <mat-error>atart time is required</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+
+                        <input matInput type="text" placeholder="To" formControlName="endTime" class="wid">
+                        <mat-error>end time is required</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field appearance="outline">
+
+                    <input matInput type="number" placeholder="Number" formControlName="Number">
+                    <mat-error>Number is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+
+                    <input matInput type="text" placeholder="Injury" formControlName="Injury">
+                    <mat-error>Injury field is required</mat-error>
+                </mat-form-field>
 
                 <div class="registerbtn">
                     <button>Cancel</button>

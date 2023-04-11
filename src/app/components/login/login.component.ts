@@ -54,16 +54,23 @@ export class LoginComponent implements OnInit {
         password: this.registerForm.value.password,
       };
 
-      this.userService.registration(this.data).subscribe((res:any)=>{
-        console.log("cvxcz",res);
-        
+      this.userService.login(this.data).subscribe((res:any)=>{
+       // console.log("cvxcz",res);
+       localStorage.setItem("userID",res.id);
          this.user = Object.entries(res).filter((a:any)=>{
           return a.email === this.registerForm.value.email && a.password === this.registerForm.value.password 
         });
         if(this.user){
           alert('Login Succesful');
-          this.registerForm.reset()
-          this.route.navigate(["dashboard"])
+          // this.userService.senduserData(this.data).subscribe((res:any)=>{
+          //   console.log("sending data",res);
+          //   localStorage.setItem("userID",res.id);
+          //   console.log("userID");
+          //   this.registerForm.reset();
+
+          //   this.route.navigate(["dashboard"])
+          // })
+         
         }else{
           alert("user not found")
         }
@@ -80,18 +87,7 @@ export class LoginComponent implements OnInit {
     }
     
 
-//       this.userService.login(data).subscribe(
-//         (response: any) => {
-//           console.log('login cli successful', response);
-//           localStorage.setItem('token',response.id);
-//           this.route.navigateByUrl('dashboard/notes');
-//           this._snackBar.open('login Successfull', '', {
-//             duration: 5000,
-//             horizontalPosition: 'start',
-//           });
-//         },
-//       )
-//     }
+     
 
 
 }

@@ -47,6 +47,24 @@
       "email": "praveensiddhardh8@gmail.com",
       "password": "444444",
       "id": 17
+    },
+    {
+      "firstName": "Praveenk",
+      "email": "pravy@gmail.com",
+      "password": "556622",
+      "id": 18
+    },
+    {
+      "email": "pravy@gmail.com",
+      "password": "445566",
+      "id": 19
+    },
+    {
+      "email": "pravy@gmail.com",
+      "password": "445566",
+      "id": 20
     }
-  ]
+  ],
+  "doctor": [],
+  "appointment": []
 }

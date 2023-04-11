@@ -30,4 +30,16 @@ export class UserService {
  return this.httpService.getService('user',false, header);
 }
 
+senduserData(reqData:any)
+{
+  let header = {
+    header:new HttpHeaders({
+      'Content-type':'application/json',
+      // 'Authorization':'token'
+    })
+  }
+  return this.httpService.postService('user', reqData, false, header);
+
+}
+
 }
