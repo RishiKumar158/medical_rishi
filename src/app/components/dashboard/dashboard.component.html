@@ -1,158 +1,42 @@
-<div class="container">
-    <div class="header">
-        <div class="search-box">
-            <img src="../../../assets/search.svg">
-            <input matInput placeholder="Search">
-        </div>
-        <div class="endd">
-            <div class="menu">
-                <img src="../../../assets/apps.svg">
-                <button class="logoutbtn">
-                    <img src="../../../assets/fotor_2023-3-21_21_58_36.png">
-                </button >
+<div class="ToolBar">
+    <div class="DataInput">
+        <input type="text" placeholder="Search">
+    </div>
 
+    <div class="RightIconsCntainer">
+        <img src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.svg" alt="Notifications" class="BellIcon">
+        <img src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="Account">
+    </div>
+</div>
 
+<div class="DoctorsContainer">
+<div style="width: 100%;height:100vh">
+<div class="TitleContainer">
+    <span class="Heading">Doctors</span>
+</div>
+
+<div class="DoctorsList">
+
+    <div class="Displayer"  *ngFor="let Doctor of doctorsData">
+        <mat-card class="Doctor1">
+            <div class="ImageContainer">
+                <img src="{{Doctor.image}}" alt="Pic1" class="DoctorImage">
             </div>
-        </div>
+
+            <div class="DetailsContainer">
+                <span class="Name">{{Doctor.name}}</span>
+                <span class="Specilization">{{Doctor.specilization}}</span>
+                <div class="Socials">
+                    <img src="../../../assets/instagram.png" alt="insta">
+                    <img src="../../../assets/facebook.png" alt="Fb">
+                    <img src="../../../assets/twitter.png" alt="twitter">
+                </div>
+                <span class="Address">759 Falcon Ave, Suite 600 San Fransisco, CADGE 94107</span>
+                <button mat-flat-button color="primary" (click)="DialogBox(Doctor)">Take Appointment</button>
+            </div>
+        </mat-card>
     </div>
-    <p class="title">Doctors</p>
-    <div class="wrapper">
-        <table>
 
-            <tr style="width: 90%;">
-                
-                <td>
-                    <div class="shadow">
-                    <img class="a" src="../../../assets/doctor5.jpg" alt="" srcset=""><br>
-                    <div class="cntercard">
-                        <p>Dr.Praveen Kumar</p>
-                        <p>Dentist</p>
-                        <span>
-                            <img src="../../../assets/instagram.png" alt="" srcset="">
-                            <img src="../../../assets/facebook.png" alt="" srcset="">
-                            <img src="../../../assets/twitter.png" alt="" srcset="">
-                        </span>
-                        <p>795 Faclcom Ave,Sult600 SanFranciso CADGE 94701</p>
-                        <div class="registerbtn">
-                            <button (click)="DialogBox()">
-                               Take Appointment
-
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                </td>
-                <td>
-                    <div class="shadow">
-                    <img class="b" src="../../../assets/doctor6.jpg" alt="" srcset="">
-                    <div class="cntercard">
-                        <p>Dr.Sophia</p>
-                        <p>Gynacholigist</p>
-                        <span>
-                            <img src="../../../assets/instagram.png" alt="" srcset="">
-                            <img src="../../../assets/facebook.png" alt="" srcset="">
-                            <img src="../../../assets/twitter.png" alt="" srcset="">
-                        </span>
-                        <p>795 Faclcom Ave,Sult600 SanFranciso CADGE 94701</p>
-                        <div class="registerbtn" >
-                            <button (click)="DialogBox()">
-                                Take Appointment
-
-                            </button>
-                        </div>
-                    </div>
-                    </div>
-                </td>
-                
-                <td>
-                    <div class="shadow">
-                    <img class="c" src="../../../assets/d12.jpg" alt="" srcset="">
-                    <div class="cntercard">
-                        <p>Dr.Melina</p>
-                        <p>Dentist</p>
-                        <span>
-                            <img src="../../../assets/instagram.png" alt="" srcset="">
-                            <img src="../../../assets/facebook.png" alt="" srcset="">
-                            <img src="../../../assets/twitter.png" alt="" srcset="">
-                        </span>
-                        <p>795 Faclcom Ave,Sult600 SanFranciso CADGE 94701</p>
-                        <div class="registerbtn">
-                            <button (click)="DialogBox()">
-                                Take Appointment
-
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                </td>
-            </tr>
-            <tr style="width: 90%;">
-                <td>
-                    <div class="shadow">
-                    <img class="a" src="../../../assets/d11.jpg" alt="" srcset=""><br>
-                    <div class="cntercard">
-                        <p>Dr.Praveen Kumar</p>
-                        <p>Dentist</p>
-                        <span>
-                            <img src="../../../assets/instagram.png" alt="" srcset="">
-                            <img src="../../../assets/facebook.png" alt="" srcset="">
-                            <img src="../../../assets/twitter.png" alt="" srcset="">
-                        </span>
-                        <p>795 Faclcom Ave,Sult600 SanFranciso CADGE 94701</p>
-                        <div class="registerbtn">
-                            <button (click)="DialogBox()">
-                                Take Appointment
-
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                </td>
-                <td>
-                    <div class="shadow">
-                    <img class="b" src="../../../assets/doctor3.jpg" alt="" srcset="">
-                    <div class="cntercard">
-                        <p>Dr.Sophia</p>
-                        <p>Gynacholigist</p>
-                        <span>
-                            <img src="../../../assets/instagram.png" alt="" srcset="">
-                            <img src="../../../assets/facebook.png" alt="" srcset="">
-                            <img src="../../../assets/twitter.png" alt="" srcset="">
-                        </span>
-                        <p>795 Faclcom Ave,Sult600 SanFranciso CADGE 94701</p>
-                        <div class="registerbtn">
-                            <button (click)="DialogBox()">
-                                Take Appointment
-
-                            </button>
-                        </div>
-                    </div>
-                    </div>
-                </td>
-                
-                <td>
-                    <div class="shadow">
-                    <img class="c" src="../../../assets/doctor4.jpg" alt="" srcset="">
-                    <div class="cntercard">
-                        <p>Dr.Melina</p>
-                        <p>Dentist</p>
-                        <span>
-                            <img src="../../../assets/instagram.png" alt="" srcset="">
-                            <img src="../../../assets/facebook.png" alt="" srcset="">
-                            <img src="../../../assets/twitter.png" alt="" srcset="">
-                        </span>
-                        <p>795 Faclcom Ave,Sult600 SanFranciso CADGE 94701</p>
-                        <div class="registerbtn">
-                            <button (click)="DialogBox()">
-                                Take Appointment
-
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                </td>
-            </tr>
-
-        </table>
-    </div>
+</div>
+</div>
 </div>

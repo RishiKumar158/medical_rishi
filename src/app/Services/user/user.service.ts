@@ -5,8 +5,10 @@ import { HttpService } from '../http/http.service';
   providedIn: 'root'
 })
 export class UserService {
-
-  constructor(private httpService : HttpService) { }
+  token: any;
+  constructor(private httpService : HttpService) {
+    //this.token = localStorage.getItem('token');
+   }
 
   registration(reqData : any){
     console.log(reqData)
@@ -19,8 +21,8 @@ export class UserService {
    return this.httpService.postService('user', reqData, false, header);
  }
 
- login(reqData : any){
-  console.log(reqData)
+ login(){
+ // console.log(reqData)
  let header = {
    header:new HttpHeaders({
      'Content-type':'application/json',
@@ -28,6 +30,17 @@ export class UserService {
    })
  }
  return this.httpService.getService('user',false, header);
+}
+
+getAppointList()
+{
+  let header = {
+    header:new HttpHeaders({
+      'Content-type':'application/json',
+      // 'Authorization':'token'
+    })
+  }
+  return this.httpService.getService('appointments',false, header);
 }
 
 senduserData(reqData:any)
@@ -40,6 +53,21 @@ senduserData(reqData:any)
   }
   return this.httpService.postService('user', reqData, false, header);
 
+}
+
+addAppointment(reqdata: any) {
+  let header = {
+    headers: new HttpHeaders({
+      'Content-type': 'application/json',
+      //Authorization: this.token,
+    }),
+  };
+  return this.httpService.postService(
+    'appointments',
+    reqdata,
+    true,
+    header
+  );
 }
 
 }

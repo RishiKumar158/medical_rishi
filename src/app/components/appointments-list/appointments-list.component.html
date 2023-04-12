@@ -1,175 +1,42 @@
 <div class="container">
-    <div class="header">
-        <div class="search-box">
-            <img src="../../../assets/search.svg">
-            <input matInput placeholder="Search">
+    <div class="ToolBar">
+        <div class="DataInput">
+            <input type="text" placeholder="Search">
         </div>
-        <div class="endd">
-            <div class="menu">
-                <img src="../../../assets/apps.svg">
-                <button class="logoutbtn">
-                    <img src="../../../assets/fotor_2023-3-21_21_58_36.png">
-                </button>
 
-
-            </div>
+        <div class="RightIconsCntainer">
+            <img src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.svg" alt="Notifications"
+                class="BellIcon">
+            <img src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="Account">
         </div>
     </div>
     <p class="title">Appointments</p>
     <div class="wrapper">
-        <div class="table-main">
-            <table id="display" class="table">
-                <tr class="head">
-                    <th class="profileimgcol">Photo</th>
-                    <th class="namecol">Name</th>
-                    <th class="deptcol">Email</th>
-                    <th class="deptcol">Date</th>
-                    <th class="salarycol">Visit time</th>
-                    <th class="datecol">Number</th>
-                    <th class="datecol">Doctor</th>
-                    <th class="datecol">Injury/Condition</th>
-                    <th class="actionscol">ACTIONS</th>
-                </tr>
-                <!-- <div class="table-body">
-                    <tbody class="tblbody"> -->
-                        <tr>
-                            <td class="profileimgcol"><img class="image" src="../../../assets/doctor5.jpg" alt="Pic1" style="border-radius:50px ;">
-                            </td>
-                            <td class="namecol">Praveen Kumar</td>
-                            <td class="deptcol">pravy50@gmail.com</td>
-                            <td class="deptcol">18 Dec 2018</td>
-                            <td class="salarycol">10:15-10:30</td>
-                            <td class="datecol">7330827008</td>
-                            <td class="datecol">Dr.Sophia</td>
-                            <td class="datecolll">fever</td>
-                            <td class="actionscol">
-                                <span>
-                                    <img src="../../../assets/delete.png" alt="" srcset="">                                    <img src="../../../assets/edit.png" alt="" srcset="">
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="profileimgcol"><img class="image" src="../../../assets/doctor5.jpg" alt="Pic1" style="border-radius:50px ;">
-                            </td>
-                            <td class="namecol">Praveen Kumar</td>
-                            <td class="deptcol">pravy50@gmail.com</td>
-                            <td class="deptcol">18 Dec 2018</td>
-                            <td class="salarycol">10:15-10:30</td>
-                            <td class="datecol">7330827008</td>
-                            <td class="datecol">Dr.Sophia</td>
-                            <td class="datecolll">fever</td>
-                            <td class="actionscol">
-                                <span>
-                                    <img src="../../../assets/delete.png" alt="" srcset="">
-                                    <img src="../../../assets/edit.png" alt="" srcset="">
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="profileimgcol"><img class="image" src="../../../assets/doctor5.jpg" alt="Pic1" style="border-radius:50px ;">
-                            </td>
-                            <td class="namecol">Praveen Kumar</td>
-                            <td class="deptcol">pravy50@gmail.com</td>
-                            <td class="deptcol">18 Dec 2018</td>
-                            <td class="salarycol">10:15-10:30</td>
-                            <td class="datecol">7330827008</td>
-                            <td class="datecol">Dr.Sophia</td>
-                            <td class="datecolll">fever</td>
-                            <td class="actionscol">
-                                <span>
-                                    <img src="../../../assets/delete.png" alt="" srcset="">
-                                    <img src="../../../assets/edit.png" alt="" srcset="">
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="profileimgcol"><img class="image" src="../../../assets/doctor5.jpg" alt="Pic1" style="border-radius:50px ;">
-                            </td>
-                            <td class="namecol">Praveen Kumar</td>
-                            <td class="deptcol">pravy50@gmail.com</td>
-                            <td class="deptcol">18 Dec 2018</td>
-                            <td class="salarycol">10:15-10:30</td>
-                            <td class="datecol">7330827008</td>
-                            <td class="datecol">Dr.Sophia</td>
-                            <td class="datecolll">fever</td>
-                            <td class="actionscol">
-                                <span>
-                                    <img src="../../../assets/delete.png" alt="" srcset="">
-                                    <img src="../../../assets/edit.png" alt="" srcset="">
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="profileimgcol"><img class="image" src="../../../assets/doctor5.jpg" alt="Pic1" style="border-radius:50px ;">
-                            </td>
-                            <td class="namecol">Praveen Kumar</td>
-                            <td class="deptcol">pravy50@gmail.com</td>
-                            <td class="deptcol">18 Dec 2018</td>
-                            <td class="salarycol">10:15-10:30</td>
-                            <td class="datecol">7330827008</td>
-                            <td class="datecol">Dr.Sophia</td>
-                            <td class="datecolll">fever</td>
-                            <td class="actionscol">
-                                <span>
-                                    <img src="../../../assets/delete.png" alt="" srcset="">
-                                    <img src="../../../assets/edit.png" alt="" srcset="">
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="profileimgcol"><img class="image" src="../../../assets/doctor5.jpg" alt="Pic1" style="border-radius:50px ;">
-                            </td>
-                            <td class="namecol">Praveen Kumar</td>
-                            <td class="deptcol">pravy50@gmail.com</td>
-                            <td class="deptcol">18 Dec 2018</td>
-                            <td class="salarycol">10:15-10:30</td>
-                            <td class="datecol">7330827008</td>
-                            <td class="datecol">Dr.Sophia</td>
-                            <td class="datecolll">fever</td>
-                            <td class="actionscol">
-                                <span>
-                                    <img src="../../../assets/delete.png" alt="" srcset="">
-                                    <img src="../../../assets/edit.png" alt="" srcset="">
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="profileimgcol"><img class="image" src="../../../assets/doctor5.jpg" alt="Pic1" style="border-radius:50px ;">
-                            </td>
-                            <td class="namecol">Praveen Kumar</td>
-                            <td class="deptcol">pravy50@gmail.com</td>
-                            <td class="deptcol">18 Dec 2018</td>
-                            <td class="salarycol">10:15-10:30</td>
-                            <td class="datecol">7330827008</td>
-                            <td class="datecol">Dr.Sophia</td>
-                            <td class="datecolll">fever</td>
-                            <td class="actionscol">
-                                <span>
-                                    <img src="../../../assets/delete.png" alt="" srcset="">
-                                    <img src="../../../assets/edit.png" alt="" srcset="">
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="profileimgcol"><img class="image" src="../../../assets/doctor5.jpg" alt="Pic1" style="border-radius:50px ;">
-                            </td>
-                            <td class="namecol">Praveen Kumar</td>
-                            <td class="deptcol">pravy50@gmail.com</td>
-                            <td class="deptcol">18 Dec 2018</td>
-                            <td class="salarycol">10:15-10:30</td>
-                            <td class="datecol">7330827008</td>
-                            <td class="datecol">Dr.Sophia</td>
-                            <td class="datecolll">fever</td>
-                            <td class="actionscol">
-                                <span>
-                                    <img src="../../../assets/delete.png" alt="" srcset="">
-                                    <img src="../../../assets/edit.png" alt="" srcset="">
-                                </span>
-                            </td>
-                        </tr>
-                    <!-- </tbody>
-                </div> -->
+        <div class="table-main" >
+            <table  class="table" >
+                <thead>
+                    <tr class="head" >
+                        <th class="profileimgcol">Photo</th>
+                        <th class="namecol">Name</th>
+                        <th class="deptcol">Email</th>
+                        <th class="deptcol">Date</th>
+                        <th class="salarycol">Visit time</th>
+                        <th class="datecol">Number</th>
+                        <th class="datecol">Doctor</th>
+                        <th class="datecol">Injury/Condition</th>
+                        <th class="actionscol">ACTIONS</th>
+                    </tr>
+                </thead>
+
+                
+                    
+                    <tbody [innerHTML]="this.innerHTMLL">
+
+                    </tbody>
+                
+           
+
             </table>
         </div>
     </div>
-    </div>
+</div>

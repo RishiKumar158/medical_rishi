@@ -7,19 +7,19 @@
             <div class="sub-header">
 
             </div>
-            <form>
+            <form [formGroup]="registerForm" (ngSubmit)="closeDialog()">
 
                 
-
+               
                 <mat-form-field appearance="outline" class="form-field">
 
-                    <input matInput type="text" placeholder="Name" formControlName="Name">
+                    <input matInput type="text" placeholder="Name" formControlName="name">
                     <mat-error>Name is required</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" class="form-field">
 
-                    <input matInput type="text" placeholder="Doctor" formControlName="doctor">
+                    <input matInput type="text" placeholder="Doctor"  value="{{data.name}}" readonly >
                     <mat-error>Doctor is required</mat-error>
                 </mat-form-field>
 
@@ -31,26 +31,26 @@
 
                 <mat-form-field appearance="outline" class="form-field">
 
-                    <input matInput type="date" placeholder="Date" formControlName="Date">
+                    <input matInput type="date" placeholder="Date" formControlName="date">
                     <mat-error>Date is required</mat-error>
                 </mat-form-field>
                 <div class="smallfIELD">
                     <mat-form-field appearance="outline">
 
-                        <input matInput type="text" placeholder="From" formControlName="startTime" class="wid">
+                        <input matInput type="text" placeholder="From"  formControlName="from" class="wid">
                         <mat-error>atart time is required</mat-error>
                     </mat-form-field>
 
                     <mat-form-field appearance="outline">
 
-                        <input matInput type="text" placeholder="To" formControlName="endTime" class="wid">
+                        <input matInput type="text" placeholder="To" formControlName="to" class="wid">
                         <mat-error>end time is required</mat-error>
                     </mat-form-field>
                 </div>
 
                 <mat-form-field appearance="outline">
 
-                    <input matInput type="number" placeholder="Number" formControlName="Number">
+                    <input matInput type="number" placeholder="Number" formControlName="number">
                     <mat-error>Number is required</mat-error>
                 </mat-form-field>
 
@@ -62,7 +62,7 @@
 
                 <div class="registerbtn">
                     <button>Cancel</button>
-                    <button class="a">Add appointment</button>
+                    <button class="a" (click)="closeDialog()">Add appointment</button>
                 </div>
 
             </form>

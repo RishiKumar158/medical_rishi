@@ -291,3 +291,44 @@ height: 100vh;
     margin-left: 60px;
   
   }
+
+  .ToolBar {
+    padding: 0% 5%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.RightIconsCntainer {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DataInput {
+    width: 30%;
+    height: 50px;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.DataInput>input {
+    width: 95%;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.DataInput:focus-within {
+    box-shadow: 0px 3px 6px 1px rgb(199, 199, 199);
+}
+
+.BellIcon {
+    height: 30px;
+}

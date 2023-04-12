@@ -17,54 +17,22 @@
       "email": "cbhzjxbcbcxzm@gmail.com",
       "password": "455644",
       "id": 11
-    },
-    {
-      "email": "praveensiddhardh8@gmail.com",
-      "password": "444444",
-      "id": 12
-    },
-    {
-      "email": "praveensiddhardh8@gmail.com",
-      "password": "444444",
-      "id": 13
-    },
-    {
-      "email": "praveensiddhardh8@gmail.com",
-      "password": "444444",
-      "id": 14
-    },
-    {
-      "email": "praveensiddhardh8@gmail.com",
-      "password": "444444",
-      "id": 15
-    },
-    {
-      "email": "praveensiddhardh8@gmail.com",
-      "password": "444444",
-      "id": 16
-    },
-    {
-      "email": "praveensiddhardh8@gmail.com",
-      "password": "444444",
-      "id": 17
-    },
-    {
-      "firstName": "Praveenk",
-      "email": "pravy@gmail.com",
-      "password": "556622",
-      "id": 18
-    },
-    {
-      "email": "pravy@gmail.com",
-      "password": "445566",
-      "id": 19
-    },
-    {
-      "email": "pravy@gmail.com",
-      "password": "445566",
-      "id": 20
     }
   ],
   "doctor": [],
-  "appointment": []
+  "appointments": [
+
+    {
+      "Patient_name": "fani",
+      "Doctor_image": "../../../assets/doctor6.jpg",
+      "Doctor_name": "Dr. Lawren",
+      "Patient_mail": "prati@gmail.com",
+      "Patient_date": "2023-05-25",
+      "Patient_fromTime": "10:45",
+      "Patient_toTime": "11:00",
+      "Patient_number": 5665998877,
+      "Patient_Injury": "fever",
+      "id": 4
+    }
+  ]
 }
