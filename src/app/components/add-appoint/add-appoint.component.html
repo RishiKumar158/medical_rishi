@@ -37,13 +37,13 @@
                 <div class="smallfIELD">
                     <mat-form-field appearance="outline">
 
-                        <input matInput type="text" placeholder="From"  formControlName="from" class="wid">
+                        <input matInput type="time" placeholder="From" min="09:00" max="18:00" formControlName="from" class="wid">
                         <mat-error>atart time is required</mat-error>
                     </mat-form-field>
 
                     <mat-form-field appearance="outline">
 
-                        <input matInput type="text" placeholder="To" formControlName="to" class="wid">
+                        <input matInput type="time" placeholder="To" min="09:00" max="18:00" formControlName="to" class="wid">
                         <mat-error>end time is required</mat-error>
                     </mat-form-field>
                 </div>

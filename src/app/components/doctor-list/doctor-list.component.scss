@@ -1,0 +1,149 @@
+.ToolBar {
+    padding: 0% 5%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.RightIconsCntainer {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DataInput {
+    width: 30%;
+    height: 50px;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.DataInput>input {
+    width: 95%;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.DataInput:focus-within {
+    box-shadow: 0px 3px 6px 1px rgb(199, 199, 199);
+}
+
+.BellIcon {
+    height: 30px;
+}
+
+.DoctorsContainer {
+    padding: 2% 5%;
+}
+
+
+.TitleContainer
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.DoctorsList
+{    width: 98%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 21px;
+}
+
+.Heading
+{
+    font-size: 50px;
+    color: rgb(116, 116, 116);
+}
+
+.Displayer
+{
+    width: 550px;
+}
+
+.Doctor1
+{
+    width: 100%;
+    height : 850px;
+    box-shadow: 0px 5px 15px 8px rgb(217, 217, 217);
+    border-radius: 8px;
+    margin-bottom: 7%;
+}
+
+.ImageContainer
+{
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.DoctorImage
+{
+    height: auto;
+    width: 100%;
+}
+
+.DetailsContainer
+{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 40%;
+}
+
+.Name
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.Specilization
+{
+    font-size: 20px;
+    color: rgb(117, 117, 117);
+}
+
+.Socials
+{
+    display: flex;
+    width: 25%;
+    justify-content: space-evenly;
+}
+
+.Socials>img
+{
+    height: 25px;
+}
+
+.Address
+{
+    font-size: 23px;
+    word-wrap: break-word;
+    text-align: center;
+    color: rgb(117, 117, 117);
+}
+
+@media only screen and (max-width:630px) {
+
+    .RightIconsCntainer {
+        width: 25%;
+    }
+
+//     .DataInput 
+//     {
+//         width:65%;
+//     }
+}

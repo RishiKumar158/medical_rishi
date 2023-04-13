@@ -70,4 +70,23 @@ addAppointment(reqdata: any) {
   );
 }
 
+deletePatient(reqdata:any) {
+  console.log("inside service del: ",reqdata);
+  
+  let header = {
+    headers: new HttpHeaders({
+      'Content-type': 'application/json',
+      //Authorization: this.token,
+    }),
+  };
+  return this.httpService.deleteService(
+    'appointments/'+reqdata,
+    reqdata,
+    true,
+    header
+  );
+
+
+}
+
 }

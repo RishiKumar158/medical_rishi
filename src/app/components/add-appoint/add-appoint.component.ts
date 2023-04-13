@@ -64,7 +64,7 @@ export class AddAppointComponent implements OnInit {
       console.log('update response', response);
     });
     this.dialogRef.close();
-   this.router.navigate(["appointment"]);
+   this.router.navigate(["dashboard/appointments"]);
     }
 }
 }

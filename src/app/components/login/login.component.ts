@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
           if (dat.email == this.data.email && dat.password == this.data.password)
            {
             localStorage.setItem('UserId', dat.id);
-            this.route.navigate(['dashboard']);
+            this.route.navigate(['dashboard/doctorsList']);
             this.registerForm.reset();
           } else {
             alert('user not found');

@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="DoctorsContainer">
+    <div style="width: 100%;height:100vh">
+    <div class="TitleContainer">
+        <span class="Heading">Doctors</span>
+    </div>
+<div class="DoctorsList">
+
+    <div class="Displayer"  *ngFor="let Doctor of doctorsData">
+        <mat-card class="Doctor1">
+            <div class="ImageContainer">
+                <img src="{{Doctor.image}}" alt="Pic1" class="DoctorImage">
+            </div>
+
+            <div class="DetailsContainer">
+                <span class="Name">{{Doctor.name}}</span>
+                <span class="Specilization">{{Doctor.specilization}}</span>
+                <div class="Socials">
+                    <img src="../../../assets/instagram.png" alt="insta">
+                    <img src="../../../assets/facebook.png" alt="Fb">
+                    <img src="../../../assets/twitter.png" alt="twitter">
+                </div>
+                <span class="Address">759 Falcon Ave, Suite 600 San Fransisco, CADGE 94107</span>
+                <button mat-flat-button color="primary" (click)="DialogBox(Doctor)">Take Appointment</button>
+            </div>
+        </mat-card>
+    </div>
+
+</div>
+
+</div>
+</div>

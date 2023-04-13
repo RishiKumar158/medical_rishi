@@ -1,21 +1,11 @@
 <div class="container">
-    <div class="ToolBar">
-        <div class="DataInput">
-            <input type="text" placeholder="Search">
-        </div>
-
-        <div class="RightIconsCntainer">
-            <img src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.svg" alt="Notifications"
-                class="BellIcon">
-            <img src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="Account">
-        </div>
-    </div>
+    <app-header></app-header>
     <p class="title">Appointments</p>
     <div class="wrapper">
-        <div class="table-main" >
-            <table  class="table" >
+        <div class="table-main">
+            <table class="table">
                 <thead>
-                    <tr class="head" >
+                    <tr class="head">
                         <th class="profileimgcol">Photo</th>
                         <th class="namecol">Name</th>
                         <th class="deptcol">Email</th>
@@ -28,13 +18,29 @@
                     </tr>
                 </thead>
 
-                
-                    
-                    <tbody [innerHTML]="this.innerHTMLL">
 
-                    </tbody>
-                
-           
+
+                <tbody *ngFor="let r of innerHTMLL">
+                    <tr>
+                        <td class="profileimgcol"><img src="{{r.Doctor_image}}"></td>
+                        <td class="namecol">{{r.Patient_name}}</td>
+                        <td class="deptcol">{{r.Patient_mail}}</td>
+                        <td class="deptcol">{{r.Patient_date}}</td>
+                        <td class="salarycol">{{r.Patient_fromTime}}-{{r.Patient_toTime}}</td>
+                        <td class="deptcol">{{r.Patient_number}}</td>
+                        <td class="deptcol">{{r.Doctor_name}}</td>
+                        <td class="deptcol">{{r.Patient_Injury}}</td>
+                        <td class="actionscol"><img width="30" height="30" id="{{r.id}}" src="../assets/delete.png"
+                                alt="delete" (click)="remove(r)">
+                            <img width="30" height="30" id="{{r.id}}" src="../assets/edit.png" alt="edit"
+                            (click)="update(r)">
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+
 
             </table>
         </div>

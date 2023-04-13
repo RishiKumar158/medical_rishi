@@ -21,18 +21,17 @@
   ],
   "doctor": [],
   "appointments": [
-
     {
-      "Patient_name": "fani",
-      "Doctor_image": "../../../assets/doctor6.jpg",
-      "Doctor_name": "Dr. Lawren",
-      "Patient_mail": "prati@gmail.com",
-      "Patient_date": "2023-05-25",
-      "Patient_fromTime": "10:45",
+      "Patient_name": "Praveen ",
+      "Doctor_image": "../../../assets/doctor5.jpg",
+      "Doctor_name": "Dr. Vijay",
+      "Patient_mail": "praveensiddhardh8@gmail.com",
+      "Patient_date": "1995-11-22",
+      "Patient_fromTime": "10:00",
       "Patient_toTime": "11:00",
-      "Patient_number": 5665998877,
+      "Patient_number": 7889455678,
       "Patient_Injury": "fever",
-      "id": 4
+      "id": 8
     }
   ]
 }

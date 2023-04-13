@@ -23,6 +23,8 @@ import { AppointmentsListComponent } from './components/appointments-list/appoin
 import { AddAppointComponent } from './components/add-appoint/add-appoint.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HeaderComponent } from './components/header/header.component';
+import { DoctorListComponent } from './components/doctor-list/doctor-list.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     SignComponent,
     DashboardComponent,
     AppointmentsListComponent,
-    AddAppointComponent
+    AddAppointComponent,
+    HeaderComponent,
+    DoctorListComponent
   ],
   imports: [
     BrowserModule,
