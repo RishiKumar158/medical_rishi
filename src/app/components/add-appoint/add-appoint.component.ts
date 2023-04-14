@@ -20,6 +20,8 @@ export class AddAppointComponent implements OnInit {
   toTime:any
   number:any
   injury:any
+  updateId:any
+  docimage:any
   constructor(
     private user: UserService,
     private formBuilder: FormBuilder,
@@ -30,28 +32,18 @@ export class AddAppointComponent implements OnInit {
     this.name = data.Patient_name;
     this.docname = data.Doctor_name;
     this.idd = data.id;
+    this.docimage=data.Doctor_image;
     this.mail=data.Patient_mail;
     this.date=data.Patient_date;
     this.fromTime=data.Patient_fromTime;
     this.toTime=data.Patient_toTime;
-    this.number=data.Patient_number
-    this.injury=data.Patient_Injury
-
-    // "Patient_name": "Ravi ",
-    //   "Doctor_image": "../../../assets/doctor5.jpg",
-    //   "Doctor_name": "Dr. Vijay",
-    //   "Patient_mail": "praveensiddhardh8@gmail.com",
-    //   "Patient_date": "1995-11-22",
-    //   "Patient_fromTime": "10:30",
-    //   "Patient_toTime": "11:30",
-    //   "Patient_number": 9989455678,
-    //   "Patient_Injury": "fever",
-    //   "id": 9
+    this.number=data.Patient_number;
+    this.injury=data.Patient_Injury;
   }
 
   ngOnInit(): void {
     //console.log(this.data.name)
-console.log(this.docname)
+//console.log(this.docname)
     
     this.registerForm = this.formBuilder.group({
            
@@ -75,11 +67,12 @@ console.log(this.docname)
  
 
   closeDialog() {
+    
     if(this.registerForm.valid){
       this.reqData = {
         Patient_name : this.registerForm.value.name,
         Doctor_image: this.data.image,
-        Doctor_name: this.data.name,
+        Doctor_name: this.data.Doctor_name,
         Patient_mail: this.registerForm.value.email,
         Patient_date: this.registerForm.value.date,
         Patient_fromTime: this.registerForm.value.from,
@@ -89,13 +82,42 @@ console.log(this.docname)
 
         //service:'advance'
       }
-   
+    }
     console.log("request appoint data:",this.reqData);
     this.user.addAppointment(this.reqData).subscribe((response: any) => {
       console.log('update response', response);
     });
     this.dialogRef.close();
    this.router.navigate(["dashboard/appointments"]);
-    }
+    
+}
+
+close() {
+  if(this.registerForm.valid){
+    this.reqData = {
+      Patient_name :this.name,
+      Doctor_name:this.docname,
+      Doctor_image:this.docimage,
+    id:this.idd,
+    Patient_mail:this.mail,
+    Patient_date:this.date,
+    Patient_fromTime:this.fromTime,
+    Patient_toTime:this.toTime,
+    Patient_number:this.number,
+    Patient_Injury:this.injury
+      //service:'advance'
+    }}
+ 
+  console.log("request appoint data close():",this.reqData);
+  this.updateId=this.reqData.id;
+  console.log("this is ahh id:",this.updateId);
+  
+  this.user.putPatient(this.reqData,this.updateId).subscribe((response: any) => {
+    console.log('update put response', response);
+  });
+  this.dialogRef.close();
+ //this.router.navigate(["dashboard/appointments"]);
+ window.location.reload();
+  
 }
 }

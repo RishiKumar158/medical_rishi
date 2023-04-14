@@ -43,6 +43,17 @@ getAppointList()
   return this.httpService.getService('appointments',false, header);
 }
 
+getdoctorList()
+{
+  let header = {
+    header:new HttpHeaders({
+      'Content-type':'application/json',
+      // 'Authorization':'token'
+    })
+  }
+  return this.httpService.getService('doctor',false, header);
+}
+
 senduserData(reqData:any)
 {
   let header = {
@@ -87,7 +98,7 @@ deletePatient(reqdata:any) {
   );
 }
 
-getPatient(reqdata:any) {
+putPatient(reqdata:any,ID: any) {
   console.log("inside service del: ",reqdata);
   
   let header = {
@@ -96,9 +107,10 @@ getPatient(reqdata:any) {
       //Authorization: this.token,
     }),
   };
-  return this.httpService.getService(
-    'appointments/'+reqdata,
-    false,
+  return this.httpService.putService(
+    'appointments/'+ID,
+    reqdata,
+    true,
     header
   );
   }

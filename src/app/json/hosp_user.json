@@ -19,61 +19,80 @@
       "id": 11
     }
   ],
-  "doctor": [],
+  "doctor": [
+    {
+      "id": 1,
+      "image": "../../../assets/doctor4.jpg",
+      "Doctor_name": "Dr. Rohit",
+      "specilization": "Gynaecologist"
+    },
+    {
+      "id": 2,
+      "image": "../../../assets/doctor5.jpg",
+      "Doctor_name": "Dr. Vijay",
+      "specilization": "Surgeon"
+    },
+    {
+      "id": 3,
+      "image": "../../../assets/doctor6.jpg",
+      "Doctor_name": "Dr. Lawren",
+      "specilization": "Dentist"
+    },
+    {
+      "id": 4,
+      "image": "../../../assets/d12.jpg",
+      "Doctor_name": "Dr. Swenthrikgz",
+      "specilization": "ENT"
+    },
+    {
+      "id": 5,
+      "image": "../../../assets/d11.jpg",
+      "Doctor_name": "Dr. Peter",
+      "specilization": "Dermatoligist"
+    },
+    {
+      "id": 6,
+      "image": "../../../assets/d9.jpg",
+      "Doctor_name": "Dr. Hensikiy",
+      "specilization": "Pediatrist"
+    }
+  ],
   "appointments": [
     {
-      "Patient_name": "Praveen ",
-      "Doctor_image": "../../../assets/doctor5.jpg",
-      "Doctor_name": "Dr. Vijay",
-      "Patient_mail": "praveensiddhardh8@gmail.com",
-      "Patient_date": "1995-11-22",
+      "Patient_name": "meghana kumari ",
+      "Doctor_name": "Dr. Swenthrikgz",
+      "Doctor_image": "../../../assets/d12.jpg",
+      "id": 31,
+      "Patient_mail": "meg123@gmail.com",
+      "Patient_date": "2022-12-11",
+      "Patient_fromTime": "11:20",
+      "Patient_toTime": "11:29",
+      "Patient_number": 7788995566,
+      "Patient_Injury": "cough"
+    },
+    {
+      "Patient_name": "Praveen kumar",
+      "Doctor_name": "Dr. Hensikiy",
+      "Doctor_image": "../../../assets/d9.jpg",
+      "id": 32,
+      "Patient_mail": "cbhzjxbcbcxzm@gmail.com",
+      "Patient_date": "2023-03-11",
+      "Patient_fromTime": "12:00",
+      "Patient_toTime": "01:00",
+      "Patient_number": 7330827008,
+      "Patient_Injury": "headach & fever"
+    },
+    {
+      "Patient_name": "Amit mishra",
+      "Doctor_name": "Dr. Lawren",
+      "Doctor_image": "../../../assets/doctor6.jpg",
+      "id": 33,
+      "Patient_mail": "amit8899@yahoo.com",
+      "Patient_date": "2022-12-22",
       "Patient_fromTime": "10:00",
-      "Patient_toTime": "11:00",
-      "Patient_number": 7889455678,
-      "Patient_Injury": "fever",
-      "id": 8
-    },
-    {
-      "Patient_name": "Ravi ",
-      "Doctor_image": "../../../assets/doctor5.jpg",
-      "Doctor_name": "Dr. Vijay",
-      "Patient_mail": "praveensiddhardh8@gmail.com",
-      "Patient_date": "1995-11-22",
-      "Patient_fromTime": "10:30",
-      "Patient_toTime": "11:30",
-      "Patient_number": 9989455678,
-      "Patient_Injury": "fever",
-      "id": 9
-    },
-    {
-      "Patient_name": "Praveen ",
-      "Patient_mail": "praveensiddhardh8@gmail.com",
-      "Patient_date": "1995-11-22",
-      "Patient_fromTime": "10:00",
-      "Patient_toTime": "11:00",
-      "Patient_number": 7889455678,
-      "Patient_Injury": "fever",
-      "id": 10
-    },
-    {
-      "Patient_name": "Ravi ",
-      "Patient_mail": "praveensiddhardh8@gmail.com",
-      "Patient_date": "1995-11-22",
-      "Patient_fromTime": "10:30",
-      "Patient_toTime": "11:30",
-      "Patient_number": 9989455678,
-      "Patient_Injury": "fever",
-      "id": 11
-    },
-    {
-      "Patient_name": "Praveen ",
-      "Patient_mail": "praveensiddhardh8@gmail.com",
-      "Patient_date": "1995-11-22",
-      "Patient_fromTime": "10:00",
-      "Patient_toTime": "11:00",
-      "Patient_number": 7889455678,
-      "Patient_Injury": "fever",
-      "id": 12
+      "Patient_toTime": "03:00",
+      "Patient_number": 7330827008,
+      "Patient_Injury": "diabatics,fever"
     }
   ]
 }

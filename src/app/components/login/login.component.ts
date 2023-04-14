@@ -60,7 +60,11 @@ export class LoginComponent implements OnInit {
             this.route.navigate(['dashboard/doctorsList']);
             this.registerForm.reset();
           } else {
-            alert('user not found');
+            //alert('user not found');
+            this._snackBar.open('login successfull', '', {
+              duration: 5000,
+              horizontalPosition: 'start',
+            });
           }
         }
       });

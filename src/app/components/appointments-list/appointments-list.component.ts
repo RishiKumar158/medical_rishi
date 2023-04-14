@@ -36,30 +36,18 @@ constructor(private user:UserService, private route: Router,private matDialog:Ma
 
         update(ctl:any)
         {
-          //console.log("to be deleted one is:",ctl);
+          
           this.resId=ctl.id;
           console.log(this.resId);
           localStorage.setItem("PatientId",this.resId);
-          //this.route.navigate(['dashboard/doctorsList']);
-          // DialogBox(ctl:any): void {
+   
             const dialogRef = this.matDialog.open(AddAppointComponent, {
               height:'800px',
               width:'500px',
               data:ctl,
-             
-              
             });
 
-            this.user.getPatient(this.resId).subscribe((res: any) => {
-              console.log("deleted respo is:",res);
-              
-              
-             })
-        
-            // dialogRef.afterClosed().subscribe(result => {
-            //   console.log('The dialog was closed');
-            // });
-         // }
+           
         }
      
   
