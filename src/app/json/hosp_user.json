@@ -32,6 +32,48 @@
       "Patient_number": 7889455678,
       "Patient_Injury": "fever",
       "id": 8
+    },
+    {
+      "Patient_name": "Ravi ",
+      "Doctor_image": "../../../assets/doctor5.jpg",
+      "Doctor_name": "Dr. Vijay",
+      "Patient_mail": "praveensiddhardh8@gmail.com",
+      "Patient_date": "1995-11-22",
+      "Patient_fromTime": "10:30",
+      "Patient_toTime": "11:30",
+      "Patient_number": 9989455678,
+      "Patient_Injury": "fever",
+      "id": 9
+    },
+    {
+      "Patient_name": "Praveen ",
+      "Patient_mail": "praveensiddhardh8@gmail.com",
+      "Patient_date": "1995-11-22",
+      "Patient_fromTime": "10:00",
+      "Patient_toTime": "11:00",
+      "Patient_number": 7889455678,
+      "Patient_Injury": "fever",
+      "id": 10
+    },
+    {
+      "Patient_name": "Ravi ",
+      "Patient_mail": "praveensiddhardh8@gmail.com",
+      "Patient_date": "1995-11-22",
+      "Patient_fromTime": "10:30",
+      "Patient_toTime": "11:30",
+      "Patient_number": 9989455678,
+      "Patient_Injury": "fever",
+      "id": 11
+    },
+    {
+      "Patient_name": "Praveen ",
+      "Patient_mail": "praveensiddhardh8@gmail.com",
+      "Patient_date": "1995-11-22",
+      "Patient_fromTime": "10:00",
+      "Patient_toTime": "11:00",
+      "Patient_number": 7889455678,
+      "Patient_Injury": "fever",
+      "id": 12
     }
   ]
 }

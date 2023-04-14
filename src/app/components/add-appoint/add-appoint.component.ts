@@ -11,6 +11,15 @@ import { Router } from '@angular/router';
 export class AddAppointComponent implements OnInit {
   registerForm!: FormGroup;
   reqData:any
+  name:any
+  docname:any
+  idd:any
+  mail:any
+  date:any
+  fromTime:any
+  toTime:any
+  number:any
+  injury:any
   constructor(
     private user: UserService,
     private formBuilder: FormBuilder,
@@ -18,14 +27,36 @@ export class AddAppointComponent implements OnInit {
     public dialogRef: MatDialogRef<AddAppointComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
+    this.name = data.Patient_name;
+    this.docname = data.Doctor_name;
+    this.idd = data.id;
+    this.mail=data.Patient_mail;
+    this.date=data.Patient_date;
+    this.fromTime=data.Patient_fromTime;
+    this.toTime=data.Patient_toTime;
+    this.number=data.Patient_number
+    this.injury=data.Patient_Injury
+
+    // "Patient_name": "Ravi ",
+    //   "Doctor_image": "../../../assets/doctor5.jpg",
+    //   "Doctor_name": "Dr. Vijay",
+    //   "Patient_mail": "praveensiddhardh8@gmail.com",
+    //   "Patient_date": "1995-11-22",
+    //   "Patient_fromTime": "10:30",
+    //   "Patient_toTime": "11:30",
+    //   "Patient_number": 9989455678,
+    //   "Patient_Injury": "fever",
+    //   "id": 9
   }
 
   ngOnInit(): void {
     //console.log(this.data.name)
+console.log(this.docname)
+    
     this.registerForm = this.formBuilder.group({
            
       name: ['', Validators.required],
-     
+      docname: ['', Validators.required],
       
       email: ['', Validators.required],
       date: ['', Validators.required],

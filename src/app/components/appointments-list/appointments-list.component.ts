@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/Services/user/user.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { AddAppointComponent } from '../add-appoint/add-appoint.component';
 @Component({
   selector: 'app-appointments-list',
   templateUrl: './appointments-list.component.html',
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
 export class AppointmentsListComponent implements OnInit {
   innerHTMLL:any=[]
   resId:any
-constructor(private user:UserService, private route: Router){}
+constructor(private user:UserService, private route: Router,private matDialog:MatDialog){}
   ngOnInit(): void {
     this.user.getAppointList().subscribe((res: any) => {
       console.log("respo is:",res);
@@ -38,8 +40,26 @@ constructor(private user:UserService, private route: Router){}
           this.resId=ctl.id;
           console.log(this.resId);
           localStorage.setItem("PatientId",this.resId);
-          this.route.navigate(['dashboard/doctorsList']);
+          //this.route.navigate(['dashboard/doctorsList']);
+          // DialogBox(ctl:any): void {
+            const dialogRef = this.matDialog.open(AddAppointComponent, {
+              height:'800px',
+              width:'500px',
+              data:ctl,
+             
+              
+            });
 
+            this.user.getPatient(this.resId).subscribe((res: any) => {
+              console.log("deleted respo is:",res);
+              
+              
+             })
+        
+            // dialogRef.afterClosed().subscribe(result => {
+            //   console.log('The dialog was closed');
+            // });
+         // }
         }
      
   

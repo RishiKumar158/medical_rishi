@@ -13,50 +13,50 @@
                
                 <mat-form-field appearance="outline" class="form-field">
 
-                    <input matInput type="text" placeholder="Name" formControlName="name">
+                    <input matInput type="text" placeholder="Name" [(ngModel)]="name" formControlName="name">
                     <mat-error>Name is required</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" class="form-field">
 
-                    <input matInput type="text" placeholder="Doctor"  value="{{data.name}}" readonly >
+                    <input matInput type="text" placeholder="Doctor" value="{{data.name}}"  [(ngModel)]="docname" formControlName="docname">
                     <mat-error>Doctor is required</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" class="form-field">
 
-                    <input matInput type="text" placeholder="Email address" formControlName="email">
+                    <input matInput type="text" placeholder="Email address" [(ngModel)]="mail" formControlName="email">
                     <mat-error>email is required</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" class="form-field">
 
-                    <input matInput type="date" placeholder="Date" formControlName="date">
+                    <input matInput type="date" placeholder="Date" [(ngModel)]="date" formControlName="date">
                     <mat-error>Date is required</mat-error>
                 </mat-form-field>
                 <div class="smallfIELD">
                     <mat-form-field appearance="outline">
 
-                        <input matInput type="time" placeholder="From" min="09:00" max="18:00" formControlName="from" class="wid">
+                        <input matInput type="time" placeholder="From" min="09:00" max="18:00" [(ngModel)]="fromTime" formControlName="from" class="wid">
                         <mat-error>atart time is required</mat-error>
                     </mat-form-field>
 
                     <mat-form-field appearance="outline">
 
-                        <input matInput type="time" placeholder="To" min="09:00" max="18:00" formControlName="to" class="wid">
+                        <input matInput type="time" placeholder="To" min="09:00" max="18:00" [(ngModel)]="toTime" formControlName="to" class="wid">
                         <mat-error>end time is required</mat-error>
                     </mat-form-field>
                 </div>
 
                 <mat-form-field appearance="outline">
 
-                    <input matInput type="number" placeholder="Number" formControlName="number">
+                    <input matInput type="number" placeholder="Number" [(ngModel)]="number" formControlName="number">
                     <mat-error>Number is required</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
 
-                    <input matInput type="text" placeholder="Injury" formControlName="Injury">
+                    <input matInput type="text" placeholder="Injury" [(ngModel)]="injury" formControlName="Injury">
                     <mat-error>Injury field is required</mat-error>
                 </mat-form-field>
 

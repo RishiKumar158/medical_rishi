@@ -33,6 +33,7 @@ export class DoctorListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+   // this.DialogBox(this.doctorsData);
     
   }
   DialogBox(doctor:any): void {

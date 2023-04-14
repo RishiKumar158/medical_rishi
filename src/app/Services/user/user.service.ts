@@ -85,8 +85,22 @@ deletePatient(reqdata:any) {
     true,
     header
   );
-
-
 }
+
+getPatient(reqdata:any) {
+  console.log("inside service del: ",reqdata);
+  
+  let header = {
+    headers: new HttpHeaders({
+      'Content-type': 'application/json',
+      //Authorization: this.token,
+    }),
+  };
+  return this.httpService.getService(
+    'appointments/'+reqdata,
+    false,
+    header
+  );
+  }
 
 }
