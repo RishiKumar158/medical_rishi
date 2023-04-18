@@ -68,6 +68,25 @@ export class LoginComponent implements OnInit {
           }
         }
       });
+      this.userService.Doctor_login().subscribe((res: any) => {
+        console.log("respo is:",res);
+        
+             for (let dat of res) {
+               
+               if (dat.email == this.data.email && dat.password == this.data.password)
+                {
+                 localStorage.setItem('UserId', dat.id);
+                 this.route.navigate(['dashboard/PatientList']);
+                 this.registerForm.reset();
+               } else {
+                 //alert('user not found');
+                 this._snackBar.open('login successfull', '', {
+                   duration: 5000,
+                   horizontalPosition: 'start',
+                 });
+               }
+             }
+           });
 
       console.log(this.registerForm.value);
     } else {

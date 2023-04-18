@@ -14,7 +14,7 @@ export class AppointmentsListComponent implements OnInit {
 constructor(private user:UserService, private route: Router,private matDialog:MatDialog){}
   ngOnInit(): void {
     this.user.getAppointList().subscribe((res: any) => {
-      console.log("respo is:",res);
+      console.log("respo is99:",res);
       this.innerHTMLL =res;
     
       })
@@ -38,7 +38,8 @@ constructor(private user:UserService, private route: Router,private matDialog:Ma
         {
           
           this.resId=ctl.id;
-          console.log(this.resId);
+          console.log("going to updated responce:",ctl);
+          console.log("going to updated Id:",this.resId);
           localStorage.setItem("PatientId",this.resId);
    
             const dialogRef = this.matDialog.open(AddAppointComponent, {

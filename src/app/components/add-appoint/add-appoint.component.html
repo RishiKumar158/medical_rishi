@@ -8,6 +8,22 @@
 
             </div>
             <form [formGroup]="registerForm" >
+
+                <mat-card-actions class="ActionTag">
+                <div class="PatientPicSection">
+                    <div class="PicArea"><img src="{{Patient_img}}" alt="" [(ngModel)]="pmage" formControlName="pmage"></div>
+                    <button mat-flat-button color="primary" [matMenuTriggerFor]="menu">Select Image</button>
+                </div>
+
+                <mat-menu #menu="matMenu" class="menuItems">
+                    <button class="ListItem" mat-menu-item><img #choice1 src="../../../assets/Ellipse1.png" alt="img1" (click)="ImageSwapper(choice1.src)"></button>
+                    <button class="ListItem" mat-menu-item><img #choice2 src="../../../assets/Ellipse2.png" alt="img2" (click)="ImageSwapper(choice2.src)"></button>
+                    <button class="ListItem" mat-menu-item><img #choice3 src="../../../assets/Ellipse3.png" alt="img3" (click)="ImageSwapper(choice3.src)"></button>
+                    <button class="ListItem" mat-menu-item><img #choice4 src="../../../assets/Ellipse4.png" alt="img4" (click)="ImageSwapper(choice4.src)"></button>
+   
+                </mat-menu>
+                </mat-card-actions>
+
                 <mat-form-field appearance="outline" class="form-field">
 
                     <input matInput type="text" placeholder="Name" [(ngModel)]="name" formControlName="name">
@@ -58,8 +74,9 @@
                 </mat-form-field>
 
                 <div class="registerbtn">
-                    <button (click)="close()">Cancel</button>
-                    <button class="a" (click)="closeDialog()">Add appointment</button>
+                    <button (click)="closy()">Cancel</button>
+                    <button class="a" *ngIf="newReg" (click)="closeDialog()">Add appointment</button>
+                    <button class="a" *ngIf="!newReg" (click)="close()">Update appointment</button>
                 </div>
 
             </form>

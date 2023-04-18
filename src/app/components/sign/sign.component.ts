@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from 'src/app/Services/user/user.service';
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 @Component({
   selector: 'app-sign',
   templateUrl: './sign.component.html',
@@ -13,7 +14,9 @@ export class SignComponent implements OnInit {
   registerForm!: FormGroup;
   submitted = false;
   hide : boolean = true;
+  checked = false;
   data:any
+  IsDoctor:any
   constructor(private formBuilder: FormBuilder,private user:UserService,private _snackBar:MatSnackBar,private router: Router) { }
 
     ngOnInit() {
@@ -30,6 +33,12 @@ export class SignComponent implements OnInit {
             
         );
       }
+
+      changed($event: MatSlideToggleChange){
+        console.log("event state:",$event.checked)
+        this.IsDoctor=true;
+        //console.log("toogle state:",this.checked)
+      }
      
       register()
       {
@@ -41,13 +50,21 @@ export class SignComponent implements OnInit {
             password: this.registerForm.value.password,
             //service:'advance'
           }
-          
+          if(this.IsDoctor==true)
+          {
+            this.user.Doctor_registration(this.data).subscribe((response:any)=>{
+              console.log("Register cli successful", response); 
+
+              this.router.navigate(["login"])
+              })
+          }
+          else{
             this.user.registration(this.data).subscribe((response:any)=>{
               console.log("Register cli successful", response); 
 
               this.router.navigate(["login"])
               })
-              
+          }  
        //);
         console.log("reg called:",this.registerForm.value);
         

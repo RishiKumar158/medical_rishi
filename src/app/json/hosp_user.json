@@ -17,6 +17,24 @@
       "email": "cbhzjxbcbcxzm@gmail.com",
       "password": "455644",
       "id": 11
+    },
+    {
+      "firstName": "Guruprav",
+      "email": "Guruprav@gmail.com",
+      "password": "999999",
+      "id": 12
+    },
+    {
+      "firstName": "Arun",
+      "email": "Arun_ar@gmail.com",
+      "password": "778899",
+      "id": 13
+    },
+    {
+      "firstName": "Praneethjj",
+      "email": "pranu700@gmail.com",
+      "password": "556655",
+      "id": 14
     }
   ],
   "doctor": [
@@ -59,40 +77,133 @@
   ],
   "appointments": [
     {
-      "Patient_name": "meghana kumari ",
-      "Doctor_name": "Dr. Swenthrikgz",
-      "Doctor_image": "../../../assets/d12.jpg",
-      "id": 31,
-      "Patient_mail": "meg123@gmail.com",
-      "Patient_date": "2022-12-11",
-      "Patient_fromTime": "11:20",
-      "Patient_toTime": "11:29",
-      "Patient_number": 7788995566,
-      "Patient_Injury": "cough"
+      "Patient_name": "vncmn",
+      "Doctor_name": "Dr. Rohit",
+      "id": 1,
+      "Patient_mail": "cbhzjxbcbcxzm@gmail.com",
+      "Patient_date": "1998-11-25",
+      "Patient_fromTime": "02:05",
+      "Patient_toTime": "03:00",
+      "Patient_number": 9887655487,
+      "Patient_Injury": "cold",
+      "Patient_img": "http://localhost:4200/assets/Ellipse2.png"
     },
     {
       "Patient_name": "Praveen kumar",
-      "Doctor_name": "Dr. Hensikiy",
-      "Doctor_image": "../../../assets/d9.jpg",
-      "id": 32,
-      "Patient_mail": "cbhzjxbcbcxzm@gmail.com",
-      "Patient_date": "2023-03-11",
-      "Patient_fromTime": "12:00",
-      "Patient_toTime": "01:00",
-      "Patient_number": 7330827008,
-      "Patient_Injury": "headach & fever"
+      "Doctor_name": "Dr. Rohit",
+      "id": 2,
+      "Patient_mail": "amit88@yahoo.com",
+      "Patient_date": "1995-05-25",
+      "Patient_fromTime": "10:00",
+      "Patient_toTime": "11:00",
+      "Patient_number": 7788995533,
+      "Patient_Injury": "fever ",
+      "Patient_img": "http://localhost:4200/assets/Ellipse3.png"
     },
     {
-      "Patient_name": "Amit mishra",
-      "Doctor_name": "Dr. Lawren",
-      "Doctor_image": "../../../assets/doctor6.jpg",
-      "id": 33,
-      "Patient_mail": "amit8899@yahoo.com",
-      "Patient_date": "2022-12-22",
+      "Patient_name": "Amit kumar",
+      "Doctor_name": "Dr. Rohit",
+      "Patient_mail": "amit88@yahoo.com",
+      "Patient_date": "1995-05-25",
       "Patient_fromTime": "10:00",
-      "Patient_toTime": "03:00",
-      "Patient_number": 7330827008,
-      "Patient_Injury": "diabatics,fever"
+      "Patient_toTime": "11:00",
+      "Patient_number": 7788995533,
+      "Patient_Injury": "fever sssvb",
+      "Patient_img": "http://localhost:4200/assets/Ellipse3.png",
+      "id": 3
+    },
+    {
+      "Patient_name": "Amit kumar",
+      "Doctor_name": "Dr. Rohit",
+      "id": 4,
+      "Patient_mail": "amit88@yahoo.com",
+      "Patient_date": "1995-05-25",
+      "Patient_fromTime": "10:00",
+      "Patient_toTime": "11:00",
+      "Patient_number": 7788995533,
+      "Patient_Injury": "fever",
+      "Patient_img": "http://localhost:4200/assets/Ellipse3.png"
+    },
+    {
+      "Patient_name": "vncmn",
+      "Doctor_image": "../../../assets/doctor4.jpg",
+      "Doctor_name": "Dr. Rohit",
+      "Patient_mail": "cbhzjxbcbcxzm@gmail.com",
+      "Patient_date": "1998-12-12",
+      "Patient_fromTime": "03:00",
+      "Patient_toTime": "04:00",
+      "Patient_number": 8997566521,
+      "Patient_Injury": "headach & fever",
+      "Patient_img": "http://localhost:4200/assets/Ellipse2.png",
+      "id": 5
+    },
+    {
+      "Patient_name": "vncmn",
+      "Doctor_name": "Dr. Rohit",
+      "Patient_mail": "cbhzjxbcbcxzm@gmail.com",
+      "Patient_date": "1998-12-12",
+      "Patient_fromTime": "03:00",
+      "Patient_toTime": "04:00",
+      "Patient_number": 8997566521,
+      "Patient_Injury": "headach & fever",
+      "Patient_img": "http://localhost:4200/assets/Ellipse1.png",
+      "id": 6
+    },
+    {
+      "Patient_name": "jaan",
+      "Doctor_name": "Dr. Rohit",
+      "id": 7,
+      "Patient_mail": "cbhzjxbcbcxzm@gmail.com",
+      "Patient_date": "1998-12-12",
+      "Patient_fromTime": "03:00",
+      "Patient_toTime": "04:00",
+      "Patient_number": 8997566521,
+      "Patient_Injury": "headach & fever",
+      "Patient_img": "http://localhost:4200/assets/Ellipse1.png"
+    },
+    {
+      "Patient_name": "vncmn",
+      "Doctor_name": "Dr. Rohit",
+      "id": 8,
+      "Patient_mail": "cbhzjxbcbcxzm@gmail.com",
+      "Patient_date": "1998-12-12",
+      "Patient_fromTime": "03:00",
+      "Patient_toTime": "04:00",
+      "Patient_number": 8997566521,
+      "Patient_Injury": "headach & fever",
+      "Patient_img": "http://localhost:4200/assets/Ellipse3.png"
+    }
+  ],
+  "Doctor_user": [
+    {
+      "id": 55,
+      "firstName": "Praveenyyy",
+      "email": "praveensiddhardh888@gmail.com",
+      "password": "444444"
+    },
+    {
+      "firstName": "Praneeth",
+      "email": "pranu7@gmail.com",
+      "password": "666666",
+      "id": 56
+    },
+    {
+      "firstName": "Lalitya",
+      "email": "Lalitya99@gmail.com",
+      "password": "505050",
+      "id": 57
+    },
+    {
+      "firstName": "Prthima",
+      "email": "pranu7@gmail.com",
+      "password": "898989",
+      "id": 58
+    },
+    {
+      "firstName": "Praneethjjuuu",
+      "email": "Praneethjjuuu@gmail.com",
+      "password": "223311",
+      "id": 59
     }
   ]
 }

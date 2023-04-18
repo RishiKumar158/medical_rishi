@@ -21,6 +21,17 @@ export class UserService {
    return this.httpService.postService('user', reqData, false, header);
  }
 
+ Doctor_registration(reqData : any){
+  console.log(reqData)
+ let header = {
+   headers:new HttpHeaders({
+     'Content-type':'application/json',
+      //'Authorization':'token'
+   })
+ }
+ return this.httpService.postService('Doctor_user', reqData, false, header);
+}
+
  login(){
  // console.log(reqData)
  let header = {
@@ -30,6 +41,17 @@ export class UserService {
    })
  }
  return this.httpService.getService('user',false, header);
+}
+
+Doctor_login()
+{
+  let header = {
+    header:new HttpHeaders({
+      'Content-type':'application/json',
+      // 'Authorization':'token'
+    })
+  }
+  return this.httpService.getService('Doctor_user',false, header);
 }
 
 getAppointList()

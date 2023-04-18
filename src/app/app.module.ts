@@ -25,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HeaderComponent } from './components/header/header.component';
 import { DoctorListComponent } from './components/doctor-list/doctor-list.component';
+import { ObserComponent } from './components/obser/obser.component';
+import { DoctorDashBoardComponent } from './components/doctor-dash-board/doctor-dash-board.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { DoctorListComponent } from './components/doctor-list/doctor-list.compon
     AppointmentsListComponent,
     AddAppointComponent,
     HeaderComponent,
-    DoctorListComponent
+    DoctorListComponent,
+    ObserComponent,
+    DoctorDashBoardComponent
   ],
   imports: [
     BrowserModule,

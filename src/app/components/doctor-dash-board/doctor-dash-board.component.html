@@ -1,6 +1,6 @@
 <div class="container">
     <app-header></app-header>
-    <p class="title">Appointments</p>
+    <p class="title">Patients</p>
     <div class="wrapper">
         <div class="table-main">
             <table class="table">
@@ -31,9 +31,9 @@
                         <td class="deptcol">{{r.Doctor_name}}</td>
                         <td class="deptcol">{{r.Patient_Injury}}</td>
                         <td class="actionscol"><img width="30" height="30" id="{{r.id}}" src="../assets/delete.png"
-                                alt="delete" (click)="remove(r)">
+                                alt="delete" >
                             <img width="30" height="30" id="{{r.id}}" src="../assets/edit.png" alt="edit"
-                            (click)="update(r)">
+                            >
                         </td>
 
                     </tr>

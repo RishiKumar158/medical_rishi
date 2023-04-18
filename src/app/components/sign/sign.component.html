@@ -28,6 +28,7 @@
               
               
               <mat-slide-toggle color="primary" class="toggle-switch">I agree to the Terms and Privacy</mat-slide-toggle>
+              <mat-slide-toggle [(ngModel)]="checked" color="primary" #doc class="toggle-switch" (change)="changed($event)">Are you Doctor?</mat-slide-toggle>
               <div class="registerbtn">
                   <button>
                       <img src="../../../assets/add.svg">
