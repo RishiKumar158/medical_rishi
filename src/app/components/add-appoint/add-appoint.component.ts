@@ -29,6 +29,8 @@ export class AddAppointComponent implements OnInit {
   updateId: any;
   docimage: any;
   pmage: any;
+  address:any;
+  age:any;
   isUpdated: boolean = true;
   my:any
   constructor(
@@ -49,7 +51,8 @@ export class AddAppointComponent implements OnInit {
     this.number = data.Patient_number;
     this.injury = data.Patient_Injury;
     this.pmage = data.Patient_img;
-    
+    this.address=data.Patient_address;
+    this.age=data.Patient_age
   }
 
   ngOnInit(): void {
@@ -76,6 +79,10 @@ export class AddAppointComponent implements OnInit {
       number: ['', Validators.required],
 
       Injury: ['', Validators.required],
+
+      address: ['', Validators.required],
+
+      age: ['', Validators.required]
 
       //P_image:['', Validators.required]
     });
@@ -110,8 +117,11 @@ export class AddAppointComponent implements OnInit {
         Patient_fromTime: this.registerForm.value.from,
         Patient_toTime: this.registerForm.value.to,
         Patient_number: this.registerForm.value.number,
+        Patient_address: this.registerForm.value.address,
+        Patient_age: this.registerForm.value.age,
         Patient_Injury: this.registerForm.value.Injury,
         Patient_img: this.Patient_img,
+        
 
         //service:'advance'
       };
@@ -138,6 +148,8 @@ export class AddAppointComponent implements OnInit {
         Patient_number: this.number,
         Patient_Injury: this.injury,
         Patient_img: this.Patient_img,
+        Patient_address: this.address,
+        Patient_age: this.age,
         //service:'advance'
       };
     }

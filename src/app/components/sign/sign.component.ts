@@ -36,7 +36,7 @@ export class SignComponent implements OnInit {
 
       changed($event: MatSlideToggleChange){
         console.log("event state:",$event.checked)
-        this.IsDoctor=true;
+        this.IsDoctor=$event.checked;
         //console.log("toogle state:",this.checked)
       }
      

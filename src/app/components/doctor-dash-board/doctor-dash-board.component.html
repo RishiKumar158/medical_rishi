@@ -4,36 +4,40 @@
     <div class="wrapper">
         <div class="table-main">
             <table class="table">
+            
                 <thead>
-                    <tr class="head">
-                        <th class="profileimgcol">Photo</th>
-                        <th class="namecol">Name</th>
-                        <th class="deptcol">Email</th>
-                        <th class="deptcol">Date</th>
-                        <th class="salarycol">Visit time</th>
-                        <th class="datecol">Number</th>
-                        <th class="datecol">Doctor</th>
-                        <th class="datecol">Injury/Condition</th>
-                        <th class="actionscol">ACTIONS</th>
+                    <tr class="head" >
+                        <th class="profileimgcol" style="background-color: rgb(66,133,244);color: white;">Photo</th>
+                        <th class="namecol" style="background-color: rgb(66,133,244);color: white;">Name</th>
+                        <th class="deptcol" style="background-color: rgb(66,133,244);color: white;">ID</th>
+                        <th class="deptcol" style="background-color: rgb(66,133,244);color: white;">Age</th>
+                        <th class="salarycol" style="background-color: rgb(66,133,244);color: white;">Address</th>
+                        <th class="datecol" style="background-color: rgb(66,133,244);color: white;">Number</th>
+                        <th class="datecol" style="background-color: rgb(66,133,244);color: white;">Last Visit</th>
+                        <th class="datecol" style="background-color: rgb(66,133,244);color: white;">Status</th>
+                        <th class="actionscol" style="background-color:rgb(66,133,244);color: white;">ACTIONS</th>
                     </tr>
                 </thead>
-
+            
 
 
                 <tbody *ngFor="let r of innerHTMLL">
                     <tr>
                         <td class="profileimgcol"><img src="{{r.Patient_img}}"></td>
                         <td class="namecol">{{r.Patient_name}}</td>
-                        <td class="deptcol">{{r.Patient_mail}}</td>
-                        <td class="deptcol">{{r.Patient_date}}</td>
-                        <td class="salarycol">{{r.Patient_fromTime}}-{{r.Patient_toTime}}</td>
+                        <td class="deptcol">{{r.id}}</td>
+                        <td class="deptcol">{{r.Patient_age}}</td>
+                        <td class="salarycol">{{r.Patient_address}}</td>
                         <td class="deptcol">{{r.Patient_number}}</td>
-                        <td class="deptcol">{{r.Doctor_name}}</td>
-                        <td class="deptcol">{{r.Patient_Injury}}</td>
-                        <td class="actionscol"><img width="30" height="30" id="{{r.id}}" src="../assets/delete.png"
-                                alt="delete" >
-                            <img width="30" height="30" id="{{r.id}}" src="../assets/edit.png" alt="edit"
+                        <td class="deptcol">{{r.Patient_toTime}}</td>
+                        <td class="deptcol">Approved</td>
+                        <td class="actionscol">
+                            <img width="30" height="30" src="../assets/share.png" alt="" srcset="" style="padding-left:2px ;padding-right:2px">
+                            
+                            <img width="30" height="30" id="{{r.id}}" src="../assets/edit (1).png" alt="edit" style="padding-left:2px ;padding-right:2px"
                             >
+                            <img width="30" height="30" id="{{r.id}}" src="../assets/delete.png" style="padding-left:2px ;padding-right:2px"
+                                alt="delete" >
                         </td>
 
                     </tr>

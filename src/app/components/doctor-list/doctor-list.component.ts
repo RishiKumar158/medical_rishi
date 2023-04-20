@@ -3,6 +3,7 @@ import {ChangeDetectorRef, OnDestroy} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddAppointComponent } from '../add-appoint/add-appoint.component';
 import { UserService } from 'src/app/Services/user/user.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-doctor-list',
   templateUrl: './doctor-list.component.html',
@@ -29,7 +30,7 @@ export class DoctorListComponent implements OnInit {
 
 
   
-  constructor(private matDialog:MatDialog,private user:UserService)
+  constructor(private matDialog:MatDialog,private user:UserService,private router:Router)
   {
      this.token=localStorage.getItem("UserId");
     console.log("user id is:",this.token);
@@ -43,6 +44,11 @@ export class DoctorListComponent implements OnInit {
   })
     
   }
+  DoctorView(Doctordata: any){
+    this.router.navigateByUrl('/dashboard/doctor-view/' + Doctordata);
+
+  }
+
   DialogBox(doctor:any): void {
     const dialogRef = this.matDialog.open(AddAppointComponent, {
       height:'800px',

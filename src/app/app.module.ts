@@ -27,6 +27,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { DoctorListComponent } from './components/doctor-list/doctor-list.component';
 import { ObserComponent } from './components/obser/obser.component';
 import { DoctorDashBoardComponent } from './components/doctor-dash-board/doctor-dash-board.component';
+import { DoctorViewComponent } from './components/doctor-view/doctor-view.component';
+import { AuthguardService } from './Services/authguard.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { DoctorDashBoardComponent } from './components/doctor-dash-board/doctor-
     HeaderComponent,
     DoctorListComponent,
     ObserComponent,
-    DoctorDashBoardComponent
+    DoctorDashBoardComponent,
+    DoctorViewComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,7 @@ import { DoctorDashBoardComponent } from './components/doctor-dash-board/doctor-
     MatSlideToggleModule,MatButtonModule,MatSidenavModule,HttpClientModule,MatSnackBarModule
   
   ],
-  providers: [],
+  providers: [AuthguardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

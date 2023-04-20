@@ -76,6 +76,17 @@ getdoctorList()
   return this.httpService.getService('doctor',false, header);
 }
 
+GetIndividualDoc(dataId:any)
+{
+  let header = {
+    header:new HttpHeaders({
+      'Content-type':'application/json',
+      // 'Authorization':'token'
+    })
+  }
+  return this.httpService.getService('doctor/'+dataId,false, header);
+}
+
 senduserData(reqData:any)
 {
   let header = {
