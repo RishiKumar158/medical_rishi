@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/Services/user/user.service';
+import { DataService } from 'src/app/Services/data.service';
 @Component({
   selector: 'app-doctor-dash-board',
   templateUrl: './doctor-dash-board.component.html',
@@ -7,7 +8,8 @@ import { UserService } from 'src/app/Services/user/user.service';
 })
 export class DoctorDashBoardComponent implements OnInit {
   innerHTMLL:any
-  constructor(private user:UserService)
+  searchNote:any
+  constructor(private user:UserService,private data:DataService)
   {
 
   }
@@ -17,6 +19,12 @@ export class DoctorDashBoardComponent implements OnInit {
       console.log("respo is99:",res);
       this.innerHTMLL =res;
     
+      })
+
+      this.data.incomingData.subscribe((res)=>{
+        console.log('Search :',res);
+        this.searchNote=res;
+        
       })
 
 }

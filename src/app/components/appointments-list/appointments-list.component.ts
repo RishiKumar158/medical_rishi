@@ -3,6 +3,7 @@ import { UserService } from 'src/app/Services/user/user.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { AddAppointComponent } from '../add-appoint/add-appoint.component';
+import { DataService } from 'src/app/Services/data.service';
 @Component({
   selector: 'app-appointments-list',
   templateUrl: './appointments-list.component.html',
@@ -11,12 +12,19 @@ import { AddAppointComponent } from '../add-appoint/add-appoint.component';
 export class AppointmentsListComponent implements OnInit {
   innerHTMLL:any=[]
   resId:any
-constructor(private user:UserService, private route: Router,private matDialog:MatDialog){}
+  searchNote:any
+constructor(private user:UserService, private route: Router,private matDialog:MatDialog,private data:DataService){}
   ngOnInit(): void {
     this.user.getAppointList().subscribe((res: any) => {
       console.log("respo is99:",res);
       this.innerHTMLL =res;
     
+      })
+
+      this.data.incomingData.subscribe((res)=>{
+        console.log('Search :',res);
+        this.searchNote=res;
+        
       })
     }
        

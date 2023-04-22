@@ -29,7 +29,8 @@ import { ObserComponent } from './components/obser/obser.component';
 import { DoctorDashBoardComponent } from './components/doctor-dash-board/doctor-dash-board.component';
 import { DoctorViewComponent } from './components/doctor-view/doctor-view.component';
 import { AuthguardService } from './Services/authguard.service';
-
+import { async } from "@angular/core/testing";
+import { FilterPipe } from './filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { AuthguardService } from './Services/authguard.service';
     DoctorListComponent,
     ObserComponent,
     DoctorDashBoardComponent,
-    DoctorViewComponent
+    DoctorViewComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

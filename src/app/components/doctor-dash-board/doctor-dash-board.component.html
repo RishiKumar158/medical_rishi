@@ -21,7 +21,7 @@
             
 
 
-                <tbody *ngFor="let r of innerHTMLL">
+                <tbody *ngFor="let r of innerHTMLL | filter:searchNote">
                     <tr>
                         <td class="profileimgcol"><img src="{{r.Patient_img}}"></td>
                         <td class="namecol">{{r.Patient_name}}</td>
