@@ -11,8 +11,8 @@ mm:any
   constructor(private route:Router,private data:DataService){}
   logout(){
     
-    localStorage.removeItem('SeesionUser')
-    this.route.navigate(['login']);
+    localStorage.removeItem('UserId')
+    this.route.navigate(['/login']);
   }
 
   search(msg:any){
